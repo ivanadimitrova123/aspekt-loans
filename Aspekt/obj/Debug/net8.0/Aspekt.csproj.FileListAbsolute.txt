@@ -1,0 +1,7 @@
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.csproj.AssemblyReference.cache
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.AssemblyInfoInputs.cache
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.AssemblyInfo.cs
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.csproj.CoreCompileInputs.cache
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ivana.dimitrova\source\repos\Aspekt\Aspekt\obj\Debug\net8.0\Aspekt.MvcApplicationPartsAssemblyInfo.cache
