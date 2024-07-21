@@ -1,6 +1,16 @@
-﻿namespace Aspekt.Contacts.CreateContact
+﻿namespace Aspekt.Contacts.CreateContact;
+
+using FluentValidation;
+
+internal sealed class CreateContactRequestValidator : AbstractValidator<CreateContactRequest>
 {
-    public class CreateContactRequestValidator
+    public CreateContactRequestValidator()
     {
+        RuleFor(request => request.Age).GreaterThan(0);
+        RuleFor(request => request.Name).NotEmpty();
+        RuleFor(request => request.Surname).NotEmpty();
+        RuleFor(request => request.PhoneNumber).NotEmpty();
+        RuleFor(request => request.SocialSecurityNumber).NotEmpty();
+        RuleFor(request => request.BankAccountNumber).NotEmpty();
     }
 }

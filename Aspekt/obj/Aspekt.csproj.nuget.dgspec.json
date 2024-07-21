@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj": {}
+    "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj": {
+    "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj",
+        "projectUniqueName": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj",
         "projectName": "Aspekt",
-        "projectPath": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj",
-        "packagesPath": "C:\\Users\\ivana.dimitrova\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\obj\\",
+        "projectPath": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj",
+        "packagesPath": "C:\\Users\\ivana\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivana.dimitrova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ivana\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,24 +34,23 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.9.2, )"
             },
-            "FluentValidation.AspNetCore": {
+            "FluentValidation.DependencyInjectionExtensions": {
               "target": "Package",
-              "version": "[11.3.0, )"
+              "version": "[11.9.2, )"
             },
             "JetBrains.Annotations": {
               "target": "Package",
@@ -61,7 +60,19 @@
               "target": "Package",
               "version": "[12.3.0, )"
             },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[8.0.7, )"
             },
@@ -69,13 +80,15 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "SonarAnalyzer.CSharp": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.29.0.95321, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
-            },
-            "System.Diagnostics.Tools": {
-              "target": "Package",
-              "version": "[4.3.0, )"
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
@@ -97,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

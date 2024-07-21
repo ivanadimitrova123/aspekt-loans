@@ -1,17 +1,17 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts;
+namespace Aspekt.Contacts;
 
-using Data.Database;
+using Aspekt.Contacts.Data.Database;
 
 internal static class ContactsModule
 {
-    internal static IServiceCollection AddContracts(this IServiceCollection services, IConfiguration configuration)
+    internal static IServiceCollection AddContacts(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDatabase(configuration);
 
         return services;
     }
 
-    internal static IApplicationBuilder UseContracts(this IApplicationBuilder applicationBuilder)
+    internal static IApplicationBuilder UseContacts(this IApplicationBuilder applicationBuilder)
     {
         applicationBuilder.UseDatabase();
 

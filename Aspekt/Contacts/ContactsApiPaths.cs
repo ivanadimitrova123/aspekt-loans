@@ -1,9 +1,8 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts;
+namespace Aspekt.Contacts;
 
-internal static class ContractsApiPaths
+internal static class ContactsApiPaths
 {
-    private const string ContractsRootApi = $"{ApiPaths.Root}/contracts";
+    private const string ContactsRootApi = $"{ApiPaths.Root}/contacts";
 
-    internal const string Prepare = ContractsRootApi;
-    internal const string Sign = $"{ContractsRootApi}/{{id}}";
+    internal const string Create = ContactsRootApi;
 }

@@ -1,4 +1,4 @@
-﻿namespace EvolutionaryArchitecture.Aspekt.Common.Clock;
+﻿namespace Aspekt.Common.Clock;
 
 internal static class ClockModule
 {

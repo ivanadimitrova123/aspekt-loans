@@ -1,13 +1,11 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts;
+namespace Aspekt.Contacts;
 
-using SignContract;
-using PrepareContract;
+using Aspekt.Contacts.CreateContact;
 
-internal static class ContractsEndpoints
+internal static class ContactsEndpoints
 {
-    internal static void MapContracts(this IEndpointRouteBuilder app)
+    internal static void MapContacts(this IEndpointRouteBuilder app)
     {
-        app.MapPrepareContract();
-        app.MapSignContract();
+        app.MapCreateContact();
     }
 }

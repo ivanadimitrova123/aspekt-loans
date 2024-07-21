@@ -1,14 +1,14 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts.PrepareContract.BusinessRules;
+namespace Aspekt.Contacts.CreateContact.BusinessRules;
 
-using Common.BusinessRulesEngine;
+using Aspekt.Common.BusinessRulesEngine;
 
-internal sealed class ContractCanBePreparedOnlyForAdultRule : IBusinessRule
+internal sealed class ContactCanBeCreatedOnlyForAdultRule : IBusinessRule
 {
     private readonly int _age;
 
-    internal ContractCanBePreparedOnlyForAdultRule(int age) => _age = age;
+    internal ContactCanBeCreatedOnlyForAdultRule(int age) => _age = age;
 
     public bool IsMet() => _age >= 18;
 
-    public string Error => "Contract can not be prepared for a person who is not adult";
+    public string Error => "Contact can not be prepared for a person who is not adult";
 }

@@ -1,7 +1,10 @@
-using EvolutionaryArchitecture.Aspekt.Common.Clock;
-using EvolutionaryArchitecture.Aspekt.Common.ErrorHandling;
-using EvolutionaryArchitecture.Aspekt.Common.Events.EventBus;
-using EvolutionaryArchitecture.Aspekt.Common.Validation.Requests;
+using Aspekt.Common.Clock;
+using Aspekt.Common.ErrorHandling;
+using Aspekt.Common.Events.EventBus;
+using Aspekt.Common.Validation.Requests;
+using Aspekt.Contacts;
+//using Aspekt.Applications;
+//using Aspekt.Loans;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,8 +19,8 @@ builder.Services.AddClock();
 //ne-builder.Services.AddEndpointsApiExplorer();
 //ne-builder.Services.AddSwaggerGen();
 
-//builder.Services.AddApplications(builder.Configuration);
-
+builder.Services.AddContacts(builder.Configuration);
+//
 
 var app = builder.Build();
 
@@ -28,8 +31,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseApplications();
-
+app.UseContacts();
+//
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -38,8 +41,8 @@ app.UseErrorHandling();
 
 app.MapControllers();
 
-//app.MapApplications();
-
+app.MapContacts();
+//
 app.Run();
 
 namespace EvolutionaryArchitecture.Aspekt   

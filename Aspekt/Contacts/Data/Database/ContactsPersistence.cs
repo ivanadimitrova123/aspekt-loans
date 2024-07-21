@@ -1,12 +1,12 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts.Data.Database;
+namespace Aspekt.Contacts.Data.Database;
 
 using Microsoft.EntityFrameworkCore;
 
-internal sealed class ContractsPersistence(DbContextOptions<ContractsPersistence> options) : DbContext(options)
+internal sealed class ContactsPersistence(DbContextOptions<ContactsPersistence> options) : DbContext(options)
 {
-    private const string Schema = "Contracts";
+    private const string Schema = "Contacts";
 
-    public DbSet<Contract> Contracts => Set<Contract>();
+    public DbSet<Contact> Contacts => Set<Contact>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

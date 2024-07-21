@@ -1,16 +1,22 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts.Data.Database;
+namespace Aspekt.Contacts.Data.Database;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-internal sealed class ContractEntityConfiguration : IEntityTypeConfiguration<Contract>
+internal sealed class ContactEntityConfiguration : IEntityTypeConfiguration<Contact>
 {
-    public void Configure(EntityTypeBuilder<Contract> builder)
+    public void Configure(EntityTypeBuilder<Contact> builder)
     {
-        builder.ToTable("Contracts");
-        builder.HasKey(contract => contract.Id);
-        builder.Property(contract => contract.PreparedAt).IsRequired();
-        builder.Property(contract => contract.Duration).IsRequired();
-        builder.Property(contract => contract.ExpiringAt).IsRequired(false);
+        builder.ToTable("Contacts");
+        builder.HasKey(contact => contact.Id);
+       // builder.Property(contact => contact.Id).ValueGeneratedOnAdd();
+        builder.Property(contact => contact.Name).IsRequired();
+        builder.Property(contact => contact.Surname).IsRequired();
+        builder.Property(contact => contact.Age).IsRequired();
+        builder.Property(contact => contact.PhoneNumber).IsRequired();
+        builder.Property(contact => contact.SocialSecurityNumber).IsRequired();
+        builder.Property(contact => contact.BankAccountNumber).IsRequired();
+        //builder.Property(contact => contact.City).IsRequired(false);
+
     }
 }

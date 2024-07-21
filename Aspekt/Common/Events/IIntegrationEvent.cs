@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Aspekt.Common.Events;
+namespace Aspekt.Common.Events;
 
 using MediatR;
 

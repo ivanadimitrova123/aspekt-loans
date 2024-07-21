@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Aspekt.Common.Events.EventBus;
+namespace Aspekt.Common.Events.EventBus;
 
 internal interface IEventBus
 {

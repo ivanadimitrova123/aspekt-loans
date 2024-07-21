@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Aspekt.Common.Validation.Requests;
+namespace Aspekt.Common.Validation.Requests;
 
 using System.Net;
 using FluentValidation;

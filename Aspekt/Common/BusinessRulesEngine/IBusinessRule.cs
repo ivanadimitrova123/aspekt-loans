@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Aspekt.Common.BusinessRulesEngine;
+namespace Aspekt.Common.BusinessRulesEngine;
 
 internal interface IBusinessRule
 {

@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Aspekt.Common.Events.EventBus;
+namespace Aspekt.Common.Events.EventBus;
 
 using System.Reflection;
 using InMemory;

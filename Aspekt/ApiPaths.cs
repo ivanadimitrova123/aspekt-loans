@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Fitnet;
+namespace Aspekt;
 
 internal static class ApiPaths
 {

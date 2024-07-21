@@ -1,4 +1,4 @@
-namespace EvolutionaryArchitecture.Aspekt.Common.ErrorHandling;
+namespace Aspekt.Common.ErrorHandling;
 
 using BusinessRulesEngine;
 using Microsoft.AspNetCore.Diagnostics;

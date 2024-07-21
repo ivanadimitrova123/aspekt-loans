@@ -1,10 +1,10 @@
-namespace EvolutionaryArchitecture.Fitnet.Contracts.Data.Database;
+namespace Aspekt.Contacts.Data.Database;
 
 using Microsoft.EntityFrameworkCore;
 
 internal static class DatabaseModule
 {
-    private const string ConnectionStringName = "Contracts";
+    private const string ConnectionStringName = "Contacts";
 
     internal static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
     {
