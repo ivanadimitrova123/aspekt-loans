@@ -1,4 +1,4 @@
-﻿namespace Aspekt.Contacts;
+namespace Aspekt;
 
 internal static class ContactsApiPaths
 {

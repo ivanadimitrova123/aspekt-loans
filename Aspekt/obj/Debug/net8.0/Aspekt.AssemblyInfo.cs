@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Aspekt")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+630216d417a7414366ea8d89d6549e0f125285d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1daaa017c7880484df066d84f3bcd52b5c5aced")]
 [assembly: System.Reflection.AssemblyProductAttribute("Aspekt")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Aspekt")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 ﻿namespace Aspekt.Contacts.CreateContact;
 
+using Aspekt;
 using Aspekt.Common.Validation.Requests;
 using Aspekt.Contacts.Data.Database;
 using FluentValidation;
