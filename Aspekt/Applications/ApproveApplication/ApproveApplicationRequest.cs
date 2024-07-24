@@ -1,6 +1,3 @@
-﻿namespace Aspekt.Applications.ApproveApplication
-{
-    public class ApproveApplicationRequest
-    {
-    }
-}
+﻿namespace Aspekt.Applications.ApproveApplication;
+
+public sealed record ApproveApplicationRequest(DateTimeOffset ApprovedAt);

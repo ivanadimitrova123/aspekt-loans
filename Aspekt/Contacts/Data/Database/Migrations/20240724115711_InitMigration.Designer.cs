@@ -9,11 +9,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Aspekt.Migrations
+namespace Aspekt.Contacts.Data.Database.Migrations
 {
     [DbContext(typeof(ContactsPersistence))]
-    [Migration("20240721201004_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240724115711_InitMigration")]
+    partial class InitMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

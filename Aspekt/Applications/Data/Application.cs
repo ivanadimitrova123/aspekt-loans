@@ -1,33 +1,40 @@
-﻿namespace Aspekt.Applications.Data
+﻿using Aspekt.Applications.ApproveApplication.BusinessRules;
+using Aspekt.Applications.CreateApplication.BusinessRules;
+using Aspekt.Common.BusinessRulesEngine;
+
+namespace Aspekt.Applications.Data
 {
     internal sealed class Application
     {
         public Guid Id { get; init; }
 
         public Guid ContactId { get; init; }
+        public int Amount { get; init; }
 
         public DateTimeOffset PreparedAt { get; init; }
         public DateTimeOffset? ApprovedAt { get; private set; }
         public bool Approved => ApprovedAt.HasValue;
 
-        private Application(Guid id, Guid contactId, DateTimeOffset preparedAt) 
+        private Application(Guid id, Guid contactId, int amount, DateTimeOffset preparedAt) 
         { 
             Id = id;
             ContactId = contactId;
+            Amount = amount;
             PreparedAt = preparedAt;
         }
 
-        internal static Application Create(Guid contactId, DateTimeOffset preparedAt) 
+        internal static Application Create(Guid contactId, int amount, DateTimeOffset preparedAt) 
         {
-            //biznis rule
+            BusinessRuleValidator.Validate(new ApplicationCanBeCreatesOnlyForAmountBiggerThen100Rule(amount));
             return new(Guid.NewGuid(),
             contactId,
+            amount,
             preparedAt
             );
         }
         internal void Approve(DateTimeOffset approvedAt) 
         {
-            //biznis rule
+            BusinessRuleValidator.Validate(new ApplicationCanOnlyBeApprovedWithin30DaysFromCreation(PreparedAt, approvedAt));
             ApprovedAt = approvedAt;
         }
     }

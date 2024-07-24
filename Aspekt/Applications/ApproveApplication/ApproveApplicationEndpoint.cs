@@ -4,11 +4,11 @@ namespace Aspekt.Applications.ApproveApplication;
 
 using Data.Database;
 using Events;
-using EvolutionaryArchitecture.Fitnet.Common.Events.EventBus;
 using Common.Validation.Requests;
 using Aspekt.Common.Events.EventBus;
 using Aspekt.Contacts.Data.Database;
 using Aspekt.Contacts;
+using System;
 
 internal static class ApproveApplicationEndpoint
 {
@@ -31,11 +31,10 @@ internal static class ApproveApplicationEndpoint
                 application.Approve(request.ApprovedAt);
                 await persistence.SaveChangesAsync(cancellationToken);
 
-                var @event = ContractSignedEvent.Create(
-                    contract.Id,
-                    contract.CustomerId,
-                    contract.SignedAt!.Value,
-                    contract.ExpiringAt!.Value,
+                var @event = ApplicationApprovedEvent.Create(
+                    application.Id,
+                    application.ContactId,
+                    application.ApprovedAt!.Value,
                     timeProvider.GetUtcNow());
                 await bus.PublishAsync(@event, cancellationToken);
 

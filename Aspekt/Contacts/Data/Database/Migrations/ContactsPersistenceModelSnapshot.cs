@@ -8,7 +8,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Aspekt.Migrations
+namespace Aspekt.Contacts.Data.Database.Migrations
 {
     [DbContext(typeof(ContactsPersistence))]
     partial class ContactsPersistenceModelSnapshot : ModelSnapshot
