@@ -1,6 +1,3 @@
-﻿namespace Aspekt.Applications.CreateApplication
-{
-    public class CreateApplicationRequest
-    {
-    }
-}
+﻿namespace Aspekt.Applications.CreateApplication;
+
+public sealed record CreateApplicationRequest(Guid CountactId, int Amount, DateTimeOffset PreparedAt);

@@ -1,6 +1,9 @@
-﻿namespace Aspekt.Applications.ApproveApplication
+﻿namespace Aspekt.Applications.ApproveApplication;
+
+using FluentValidation;
+
+internal sealed class ApproveApplicationRequestValidator : AbstractValidator<ApproveApplicationRequest>
 {
-    public class ApproveApplicationRequestValidator
-    {
-    }
+    public ApproveApplicationRequestValidator() => RuleFor(approveApplicationRequest => approveApplicationRequest.ApprovedAt)
+            .NotEmpty();
 }
