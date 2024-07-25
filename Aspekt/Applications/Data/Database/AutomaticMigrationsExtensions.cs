@@ -1,6 +1,5 @@
 ﻿namespace Aspekt.Applications.Data.Database;
 
-using Aspekt.Contacts.Data.Database;
 using Microsoft.EntityFrameworkCore;
 
 internal static class AutomaticMigrationsExtensions

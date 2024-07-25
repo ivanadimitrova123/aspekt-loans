@@ -1,4 +1,4 @@
-﻿using Aspekt.Contacts.Data.Database;
+﻿using Aspekt.Applications.Data.Database;
 
 namespace Aspekt.Applications
 {

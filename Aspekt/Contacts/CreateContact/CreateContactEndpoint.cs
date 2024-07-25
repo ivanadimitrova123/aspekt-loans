@@ -19,12 +19,12 @@ internal static class CreateContactEndpoint
             return Results.Created($"/{ContactsApiPaths.Create}/{contact.Id}", contact.Id);
         })
     .ValidateRequest<CreateContactRequest>()
-    /*.WithOpenApi(operation => new(operation)
+    .WithOpenApi(operation => new(operation)
     {
         Summary = "Triggers creation of a new contact for new customer",
         Description =
             "This endpoint is used to create a new contact for new customers.",
-    })*/
+    })
     .Produces<string>(StatusCodes.Status201Created)
     .Produces(StatusCodes.Status409Conflict)
     .Produces(StatusCodes.Status500InternalServerError);

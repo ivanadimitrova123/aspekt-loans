@@ -6,8 +6,6 @@ using Data.Database;
 using Events;
 using Common.Validation.Requests;
 using Aspekt.Common.Events.EventBus;
-using Aspekt.Contacts.Data.Database;
-using Aspekt.Contacts;
 using System;
 
 internal static class ApproveApplicationEndpoint

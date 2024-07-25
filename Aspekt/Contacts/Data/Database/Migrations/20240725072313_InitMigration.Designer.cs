@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Aspekt.Contacts.Data.Database.Migrations
 {
     [DbContext(typeof(ContactsPersistence))]
-    [Migration("20240724115711_InitMigration")]
+    [Migration("20240725072313_InitMigration")]
     partial class InitMigration
     {
         /// <inheritdoc />

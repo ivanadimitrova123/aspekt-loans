@@ -2,7 +2,6 @@
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Diagnostics.Contracts;
 
 internal sealed class ApplicationEntityConfiguration : IEntityTypeConfiguration<Application>
 {
