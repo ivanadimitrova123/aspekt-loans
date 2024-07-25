@@ -8,10 +8,10 @@ namespace Aspekt.Applications.Data
     {
         public Guid Id { get; init; }
 
-        public Guid ContactId { get; init; }
-        public int Amount { get; init; }
+        public Guid ContactId { get; private set; }
+        public int Amount { get; private set; }
 
-        public DateTimeOffset PreparedAt { get; init; }
+        public DateTimeOffset PreparedAt { get; private set; }
         public DateTimeOffset? ApprovedAt { get; private set; }
         public bool Approved => ApprovedAt.HasValue;
 

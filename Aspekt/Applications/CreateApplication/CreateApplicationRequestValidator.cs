@@ -2,7 +2,7 @@
 
 using FluentValidation;
 
-internal sealed class CreateApplicationRequestValidator : AbstractValidator<CreateApplicationRequest>
+public sealed class CreateApplicationRequestValidator : AbstractValidator<CreateApplicationRequest>
 {
     public CreateApplicationRequestValidator()
     {

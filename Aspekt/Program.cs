@@ -50,7 +50,7 @@ app.MapLoans();
 
 app.Run();
 
-namespace EvolutionaryArchitecture.Aspekt   
+namespace Aspekt   
 {
     [UsedImplicitly]
     public sealed class Program;

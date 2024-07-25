@@ -7,7 +7,7 @@ using Data;
 using Data.Database;
 using Events;
 
-internal sealed class ContractSignedEventHandler(
+internal sealed class ApplicationApprocedEventHandler(
     LoansPersistence persistence,
     IEventBus eventBus) : IIntegrationEventHandler<ApplicationApprovedEvent>
 {

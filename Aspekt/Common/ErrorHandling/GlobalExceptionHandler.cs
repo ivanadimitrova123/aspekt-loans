@@ -4,7 +4,7 @@ using BusinessRulesEngine;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 
-internal sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
+public sealed class GlobalExceptionHandler(ILogger<GlobalExceptionHandler> logger) : IExceptionHandler
 {
     private const string? ServerError = "Server Error";
     private const string ErrorOccurredMessage = "An error occurred.";

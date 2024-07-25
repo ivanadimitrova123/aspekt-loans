@@ -1,8 +1,8 @@
 namespace Aspekt.Common.BusinessRulesEngine;
 
-internal static class BusinessRuleValidator
+public static class BusinessRuleValidator
 {
-    internal static void Validate(IBusinessRule rule)
+    public static void Validate(IBusinessRule rule)
     {
         if (!rule.IsMet())
         {

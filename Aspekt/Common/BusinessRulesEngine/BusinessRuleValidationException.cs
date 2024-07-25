@@ -1,8 +1,8 @@
 namespace Aspekt.Common.BusinessRulesEngine;
 
-internal class BusinessRuleValidationException : InvalidOperationException
+public class BusinessRuleValidationException : InvalidOperationException
 {
-    internal BusinessRuleValidationException(string message) : base(message)
+    public BusinessRuleValidationException(string message) : base(message)
     {
     }
 }

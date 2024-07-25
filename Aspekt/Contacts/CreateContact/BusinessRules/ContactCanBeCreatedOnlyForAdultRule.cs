@@ -2,11 +2,11 @@ namespace Aspekt.Contacts.CreateContact.BusinessRules;
 
 using Aspekt.Common.BusinessRulesEngine;
 
-internal sealed class ContactCanBeCreatedOnlyForAdultRule : IBusinessRule
+public sealed class ContactCanBeCreatedOnlyForAdultRule : IBusinessRule
 {
     private readonly int _age;
 
-    internal ContactCanBeCreatedOnlyForAdultRule(int age) => _age = age;
+    public ContactCanBeCreatedOnlyForAdultRule(int age) => _age = age;
 
     public bool IsMet() => _age >= 18;
 

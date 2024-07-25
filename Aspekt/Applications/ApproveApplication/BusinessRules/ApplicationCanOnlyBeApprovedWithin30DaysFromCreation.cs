@@ -2,12 +2,12 @@
 
 using Common.BusinessRulesEngine;
 
-internal sealed class ApplicationCanOnlyBeApprovedWithin30DaysFromCreation : IBusinessRule
+public sealed class ApplicationCanOnlyBeApprovedWithin30DaysFromCreation : IBusinessRule
 {
     private readonly DateTimeOffset _preparedAt;
     private readonly DateTimeOffset _approvedAt;
 
-    internal ApplicationCanOnlyBeApprovedWithin30DaysFromCreation(DateTimeOffset preparedAt,
+    public ApplicationCanOnlyBeApprovedWithin30DaysFromCreation(DateTimeOffset preparedAt,
         DateTimeOffset approvedAt)
     {
         _preparedAt = preparedAt;

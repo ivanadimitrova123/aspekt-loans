@@ -2,7 +2,7 @@
 
 using FluentValidation;
 
-internal sealed class CreateContactRequestValidator : AbstractValidator<CreateContactRequest>
+public sealed class CreateContactRequestValidator : AbstractValidator<CreateContactRequest>
 {
     public CreateContactRequestValidator()
     {
