@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace Aspekt.Applications.ApproveApplication;
+﻿namespace Aspekt.Applications.ApproveApplication;
 
 using Data.Database;
 using Events;

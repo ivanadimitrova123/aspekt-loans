@@ -4,7 +4,7 @@ using Aspekt.Common.Events.EventBus;
 using Aspekt.Common.Validation.Requests;
 using Aspekt.Contacts;
 using Aspekt.Applications;
-//using Aspekt.Loans;
+using Aspekt.Loans;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,7 +21,7 @@ builder.Services.AddClock();
 
 builder.Services.AddContacts(builder.Configuration);
 builder.Services.AddApplications(builder.Configuration);
-//
+builder.Services.AddLoans(builder.Configuration);
 
 var app = builder.Build();
 
@@ -34,7 +34,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseContacts();
 app.UseApplications();
-//
+app.UseLoans();
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -45,7 +46,8 @@ app.MapControllers();
 
 app.MapContacts();
 app.MapApplications();
-//
+app.MapLoans();
+
 app.Run();
 
 namespace EvolutionaryArchitecture.Aspekt   

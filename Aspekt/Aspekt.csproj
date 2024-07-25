@@ -9,6 +9,7 @@
     <ItemGroup>
       <Folder Include="Applications\Data\Database\Migrations\" />
       <Folder Include="Contacts\Data\Database\Migrations\" />
+      <Folder Include="Loans\Data\Database\Migrations\" />
     </ItemGroup>
 
     <ItemGroup>
