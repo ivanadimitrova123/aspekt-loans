@@ -2,4 +2,4 @@ namespace Aspekt.Common.Events;
 
 using MediatR;
 
-internal interface IIntegrationEventHandler<in TEvent> : INotificationHandler<TEvent> where TEvent : IIntegrationEvent;
+public interface IIntegrationEventHandler<in TEvent> : INotificationHandler<TEvent> where TEvent : IIntegrationEvent;

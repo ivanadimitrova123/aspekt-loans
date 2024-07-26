@@ -2,7 +2,7 @@ namespace Aspekt.Common.Events;
 
 using MediatR;
 
-internal interface IIntegrationEvent : INotification
+public interface IIntegrationEvent : INotification
 {
     Guid Id { get; }
     DateTimeOffset OccurredDateTime { get; }

@@ -1,8 +1,8 @@
 ﻿namespace Aspekt.Contacts;
 
-internal static class ContactsApiPaths
+public static class ContactsApiPaths
 {
     private const string ContactsRootApi = $"{ApiPaths.Root}/contacts";
 
-    internal const string Create = ContactsRootApi;
+    public const string Create = ContactsRootApi;
 }
