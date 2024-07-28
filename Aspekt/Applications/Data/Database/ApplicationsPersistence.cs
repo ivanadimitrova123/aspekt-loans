@@ -2,7 +2,7 @@
 
 using Microsoft.EntityFrameworkCore;
 
-internal sealed class ApplicationsPersistence(DbContextOptions<ApplicationsPersistence> options) : DbContext(options)
+public sealed class ApplicationsPersistence(DbContextOptions<ApplicationsPersistence> options) : DbContext(options)
 {
     private const string Schema = "Applications";
 

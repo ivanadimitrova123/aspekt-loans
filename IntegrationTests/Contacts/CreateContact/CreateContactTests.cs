@@ -1,9 +1,7 @@
 namespace Aspekt.IntegrationTests.Contacts.CreateContact;
 
 using Aspekt.Contacts;
-using Aspekt.Contacts.CreateContact;
 using Common.TestEngine;
-using Common.TestEngine.Configuration;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Net.Http.Json;
@@ -11,13 +9,12 @@ using FluentAssertions;
 using Xunit;
 using Microsoft.EntityFrameworkCore;
 using Aspekt.Contacts.Data.Database;
-using System.Text.Json;
 
-public sealed class CreateContactTests : IClassFixture<WebApplicationFactory<Program>>, IClassFixture<DatabaseContainer>
+public sealed class CreateApplicationtTests : IClassFixture<WebApplicationFactory<Program>>, IClassFixture<DatabaseContainer>
 {
     private readonly HttpClient _applicationHttpClient;
 
-    public CreateContactTests(WebApplicationFactory<Program> applicationFactory, DatabaseContainer database)
+    public CreateApplicationtTests(WebApplicationFactory<Program> applicationFactory, DatabaseContainer database)
     {
         _applicationHttpClient = applicationFactory
             .WithWebHostBuilder(builder =>
@@ -41,11 +38,8 @@ public sealed class CreateContactTests : IClassFixture<WebApplicationFactory<Pro
         var prepareContactRequest = new CreateContactRequestFaker(requestParameters.MinAge, requestParameters.MaxAge).Generate();
 
         // Act
-        Console.WriteLine($"Request: {System.Text.Json.JsonSerializer.Serialize(prepareContactRequest)}");
         var prepareContactResponse = await _applicationHttpClient.PostAsJsonAsync(ContactsApiPaths.Create, prepareContactRequest);
-        var responseContent = await prepareContactResponse.Content.ReadAsStringAsync();
-        Console.WriteLine($"Response: {responseContent}");
-
+       // var responseContent = await prepareContactResponse.Content.ReadAsStringAsync();
         // Assert
         prepareContactResponse.Should().HaveStatusCode(HttpStatusCode.Created);
     }
@@ -69,12 +63,12 @@ public sealed class CreateContactTests : IClassFixture<WebApplicationFactory<Pro
         responseMessage?.Title.Should().Be("Contact can not be prepared for a person who is not adult");
     }
 
-    private async Task<HttpResponseMessage> PrepareCorrectContact(CreateContactRequestParameters requestParameters)
+  /*  private async Task<HttpResponseMessage> PrepareCorrectContact(CreateContactRequestParameters requestParameters)
     {
         var prepareContractRequest = new CreateContactRequestFaker(requestParameters.MinAge, requestParameters.MaxAge);
 
         var prepareContractResponse = await _applicationHttpClient.PostAsJsonAsync(ContactsApiPaths.Create, prepareContractRequest);
 
         return prepareContractResponse;
-    }
+    }*/
 }

@@ -4,7 +4,7 @@ using Aspekt.Common.BusinessRulesEngine;
 
 namespace Aspekt.Applications.Data
 {
-    internal sealed class Application
+    public sealed class Application
     {
         public Guid Id { get; init; }
 
