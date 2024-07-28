@@ -4,7 +4,7 @@ using FluentValidation;
 
 namespace Aspekt.Contacts;
 
-internal sealed class Contact
+public sealed class Contact
 {
     public Guid Id { get; init; }
     public string Name { get; init; }

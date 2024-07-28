@@ -1,24 +1,23 @@
-namespace Aspekt.IntegrationTests.Common.TestEngine.Configuration;
-
-using System.Reflection;
 using Aspekt.Common.Events.EventBus;
 using Aspekt.Common.Events.EventBus.InMemory;
-using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
+using System.Reflection;
+
+namespace Aspekt.IntegrationTests.Common.TestEngine.Configuration;
 
 internal static class ConfigurationExtensions
 {
-    internal static WebApplicationFactory<T> WithContainerDatabaseConfigured<T>(this WebApplicationFactory<T> webApplicationFactory, string connectionString)
+    internal static WebApplicationFactory<T> WithDatabaseConfigured<T>(this WebApplicationFactory<T> webApplicationFactory, IConfiguration configuration)
         where T : class
     {
-        var connectionStringsConfiguration = new Dictionary<string, string?>
+        var connectionStrings = new Dictionary<string, string?>
         {
-            {ConfigurationKeys.ContactsConnectionString, connectionString},
-            {ConfigurationKeys.ApplicationsConnectionString, connectionString},
-            {ConfigurationKeys.LoansConnectionString, connectionString},
+            {ConfigurationKeys.ContactsConnectionString, configuration.GetConnectionString("Contacts")},
+            {ConfigurationKeys.ApplicationsConnectionString, configuration.GetConnectionString("Applications")},
+            {ConfigurationKeys.LoansConnectionString, configuration.GetConnectionString("Loans")},
         };
 
-        return webApplicationFactory.UseSettings(connectionStringsConfiguration);
+        return webApplicationFactory.UseSettings(connectionStrings);
     }
 
     private static WebApplicationFactory<T> UseSettings<T>(this WebApplicationFactory<T> webApplicationFactory, Dictionary<string, string?> settings)

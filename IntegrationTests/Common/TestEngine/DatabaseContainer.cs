@@ -1,28 +1,25 @@
 namespace Aspekt.IntegrationTests.Common.TestEngine;
 
-using Testcontainers.PostgreSql;
-
-[UsedImplicitly]
 public sealed class DatabaseContainer : IAsyncLifetime
 {
-    private const string Username = "admin";
-    private const string Password = "$3cureP@ssw0rd";
-    private const string Database = "fitnet";
-    private PostgreSqlContainer? _container;
     internal string? ConnectionString;
+    private IConfiguration? _configuration;
 
     public async Task InitializeAsync()
     {
-        _container = new PostgreSqlBuilder()
-            .WithDatabase(Database)
-            .WithUsername(Username)
-            .WithPassword(Password)
+        _configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
             .Build();
 
-        await _container!.StartAsync();
+        ConnectionString = _configuration.GetConnectionString("DefaultConnection");
 
-        ConnectionString = _container.GetConnectionString();
+        await Task.CompletedTask; 
     }
 
-    public async Task DisposeAsync() => await _container!.StopAsync();
+    public async Task DisposeAsync()
+    {
+        await Task.CompletedTask; 
+    }
+
+    public IConfiguration GetConfiguration() => _configuration!;
 }

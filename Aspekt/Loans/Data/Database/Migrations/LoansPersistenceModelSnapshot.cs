@@ -32,6 +32,9 @@ namespace Aspekt.Loans.Data.Database.Migrations
                     b.Property<Guid>("ContactId")
                         .HasColumnType("uuid");
 
+                    b.Property<DateTimeOffset?>("PaidOffAt")
+                        .HasColumnType("timestamp with time zone");
+
                     b.HasKey("Id");
 
                     b.ToTable("Loans", "Loans");

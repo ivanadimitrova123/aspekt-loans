@@ -8719,19 +8719,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivana.dimitrova\\.nuget\\packages\\": {}
+    "C:\\Users\\ivana\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\ArchitectureTests\\ArchitectureTests.csproj",
+      "projectUniqueName": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\ArchitectureTests\\ArchitectureTests.csproj",
       "projectName": "ArchitectureTests",
-      "projectPath": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\ArchitectureTests\\ArchitectureTests.csproj",
-      "packagesPath": "C:\\Users\\ivana.dimitrova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\ArchitectureTests\\obj\\",
+      "projectPath": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\ArchitectureTests\\ArchitectureTests.csproj",
+      "packagesPath": "C:\\Users\\ivana\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\ArchitectureTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ivana.dimitrova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivana\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8745,8 +8745,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj": {
-              "projectPath": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj"
+            "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj": {
+              "projectPath": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj"
             }
           }
         }
@@ -8755,11 +8755,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -8817,7 +8812,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

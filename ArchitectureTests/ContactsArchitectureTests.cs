@@ -7,10 +7,10 @@ public sealed class ContactsArchitectureTests
     [Theory]
     [InlineData(Modules.Applications)]
     [InlineData(Modules.Loans)]
-    internal void Contrats_should_not_have_dependency_on_module(string moduleName)
+    internal void Contacts_should_not_have_dependency_on_module(string moduleName)
     {
         // Arrange
-        var contractsModule = Solution.Types
+        var contactsModule = Solution.Types
             .That()
             .ResideInNamespace(Modules.Contacts);
 
@@ -20,7 +20,7 @@ public sealed class ContactsArchitectureTests
         var forbiddenModuleTypes = forbiddenModule.GetModuleTypes();
 
         // Act
-        var rules = contractsModule
+        var rules = contactsModule
             .Should()
             .NotHaveDependencyOnAny(forbiddenModuleTypes);
         var validationResult = rules!.GetResult();

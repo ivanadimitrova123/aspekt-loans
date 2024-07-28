@@ -1,4 +1,4 @@
-namespace Aspekt.IntegrationTests.Contrats.CreateContact;
+namespace Aspekt.IntegrationTests.Contacts.CreateContact;
 
 internal sealed record CreateContactRequestParameters(int MinAge, int MaxAge)
 {

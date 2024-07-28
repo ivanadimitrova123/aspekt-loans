@@ -2,7 +2,7 @@ namespace Aspekt.Contacts.Data.Database;
 
 using Microsoft.EntityFrameworkCore;
 
-internal sealed class ContactsPersistence(DbContextOptions<ContactsPersistence> options) : DbContext(options)
+public sealed class ContactsPersistence(DbContextOptions<ContactsPersistence> options) : DbContext(options)
 {
     private const string Schema = "Contacts";
 

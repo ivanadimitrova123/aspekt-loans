@@ -12,7 +12,7 @@ public sealed class ApplicationsArchitectureTests
     internal void Applications_should_not_have_dependency_on_module(string moduleName)
     {
         // Arrange
-        var offersModule = Solution.Types
+        var applicationssModule = Solution.Types
             .That()
             .ResideInNamespace(Modules.Applications);
 
@@ -22,7 +22,7 @@ public sealed class ApplicationsArchitectureTests
         var forbiddenModuleTypes = forbiddenModule.GetModuleTypes();
 
         // Act
-        var rules = offersModule
+        var rules = applicationssModule
             .Should()
             .NotHaveDependencyOnAny(forbiddenModuleTypes);
         var validationResult = rules!.GetResult();

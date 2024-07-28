@@ -1,18 +1,18 @@
+using Aspekt.Common.Events.EventBus;
+using Aspekt.IntegrationTests.Common.TestEngine.Configuration;
+
 namespace Aspekt.IntegrationTests.Common.Events.EventBus.InMemory;
 
-using Aspekt.Common.Events.EventBus;
-using TestEngine.Configuration;
-
 public sealed class InMemoryEventBusTests(
-    WebApplicationFactory<Program> applicationInMemoryFactory,
+    WebApplicationFactory<Program> applicationFactory,
     DatabaseContainer database) : IClassFixture<WebApplicationFactory<Program>>, IClassFixture<DatabaseContainer>
 {
-    private readonly WebApplicationFactory<Program> _applicationInMemory = applicationInMemoryFactory
-        .WithContainerDatabaseConfigured(database.ConnectionString!)
+    private readonly WebApplicationFactory<Program> _application = applicationFactory
+        .WithDatabaseConfigured(database.GetConfiguration())
         .WithFakeConsumers();
 
     [Fact]
-    internal async Task Given_valid_event_published_Then_event_should_be_consumed()
+    public async Task Given_valid_event_published_Then_event_should_be_consumed()
     {
         // Arrange
         var eventBus = GetEventBus();
@@ -26,7 +26,7 @@ public sealed class InMemoryEventBusTests(
     }
 
     private IEventBus GetEventBus() =>
-        _applicationInMemory.Services
+        _application.Services
             .CreateScope()
             .ServiceProvider
             .GetRequiredService<IEventBus>();

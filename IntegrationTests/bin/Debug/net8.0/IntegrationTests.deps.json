@@ -44,8 +44,7 @@
           "Microsoft.Extensions.TimeProvider.Testing": "8.7.0",
           "Microsoft.NET.Test.Sdk": "17.10.0",
           "NSubstitute": "5.1.0",
-          "Testcontainers": "3.9.0",
-          "Testcontainers.PostgreSql": "3.9.0",
+          "NetArchTest.Rules": "1.3.2",
           "Verify.Xunit": "26.1.2",
           "coverlet.collector": "6.0.2",
           "xunit": "2.9.0",
@@ -194,7 +193,7 @@
           "mscorlib": "4.0.0.0",
           "netstandard": "2.1.0.0",
           "System.AppContext": "8.0.0.0",
-          "System.Buffers.Reference": "8.0.0.0",
+          "System.Buffers": "8.0.0.0",
           "System.Collections.Concurrent": "8.0.0.0",
           "System.Collections": "8.0.0.0",
           "System.Collections.Immutable.Reference": "8.0.0.0",
@@ -331,7 +330,7 @@
           "System.Threading.RateLimiting": "8.0.0.0",
           "System.Threading.Tasks.Dataflow": "8.0.0.0",
           "System.Threading.Tasks": "8.0.0.0",
-          "System.Threading.Tasks.Extensions.Reference": "8.0.0.0",
+          "System.Threading.Tasks.Extensions": "8.0.0.0",
           "System.Threading.Tasks.Parallel": "8.0.0.0",
           "System.Threading.Thread": "8.0.0.0",
           "System.Threading.ThreadPool": "8.0.0.0",
@@ -421,36 +420,6 @@
         },
         "compile": {
           "lib/net8.0/DiffEngine.dll": {}
-        }
-      },
-      "Docker.DotNet/3.125.15": {
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.1",
-          "System.Buffers": "4.5.1",
-          "System.Threading.Tasks.Extensions": "4.5.4"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Docker.DotNet.dll": {
-            "assemblyVersion": "3.125.0.0",
-            "fileVersion": "3.125.15.1"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.1/Docker.DotNet.dll": {}
-        }
-      },
-      "Docker.DotNet.X509/3.125.15": {
-        "dependencies": {
-          "Docker.DotNet": "3.125.15"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Docker.DotNet.X509.dll": {
-            "assemblyVersion": "3.125.0.0",
-            "fileVersion": "3.125.15.1"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.1/Docker.DotNet.X509.dll": {}
         }
       },
       "EmptyFiles/8.3.0": {
@@ -1435,6 +1404,32 @@
           "lib/netcoreapp3.1/testhost.dll": {}
         }
       },
+      "Mono.Cecil/0.11.3": {
+        "runtime": {
+          "lib/netstandard2.0/Mono.Cecil.Mdb.dll": {
+            "assemblyVersion": "0.11.3.0",
+            "fileVersion": "0.11.3.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.Pdb.dll": {
+            "assemblyVersion": "0.11.3.0",
+            "fileVersion": "0.11.3.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.Rocks.dll": {
+            "assemblyVersion": "0.11.3.0",
+            "fileVersion": "0.11.3.0"
+          },
+          "lib/netstandard2.0/Mono.Cecil.dll": {
+            "assemblyVersion": "0.11.3.0",
+            "fileVersion": "0.11.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Mono.Cecil.Mdb.dll": {},
+          "lib/netstandard2.0/Mono.Cecil.Pdb.dll": {},
+          "lib/netstandard2.0/Mono.Cecil.Rocks.dll": {},
+          "lib/netstandard2.0/Mono.Cecil.dll": {}
+        }
+      },
       "Mono.TextTemplating/2.2.1": {
         "dependencies": {
           "System.CodeDom": "8.0.0"
@@ -1447,6 +1442,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Mono.TextTemplating.dll": {}
+        }
+      },
+      "NetArchTest.Rules/1.3.2": {
+        "dependencies": {
+          "Mono.Cecil": "0.11.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetArchTest.Rules.dll": {
+            "assemblyVersion": "1.3.1.0",
+            "fileVersion": "1.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NetArchTest.Rules.dll": {}
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -1505,17 +1514,6 @@
           "lib/net6.0/NSubstitute.dll": {}
         }
       },
-      "SharpZipLib/1.4.2": {
-        "runtime": {
-          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
-            "assemblyVersion": "1.4.2.13",
-            "fileVersion": "1.4.2.13"
-          }
-        },
-        "compile": {
-          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {}
-        }
-      },
       "SimpleInfoName/2.3.0": {
         "runtime": {
           "lib/net8.0/SimpleInfoName.dll": {
@@ -1525,31 +1523,6 @@
         },
         "compile": {
           "lib/net8.0/SimpleInfoName.dll": {}
-        }
-      },
-      "SSH.NET/2023.0.0": {
-        "dependencies": {
-          "SshNet.Security.Cryptography": "1.3.0"
-        },
-        "runtime": {
-          "lib/net7.0/Renci.SshNet.dll": {
-            "assemblyVersion": "2023.0.0.0",
-            "fileVersion": "2023.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/net7.0/Renci.SshNet.dll": {}
-        }
-      },
-      "SshNet.Security.Cryptography/1.3.0": {
-        "runtime": {
-          "lib/netstandard2.0/SshNet.Security.Cryptography.dll": {
-            "assemblyVersion": "1.3.0.0",
-            "fileVersion": "1.3.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/SshNet.Security.Cryptography.dll": {}
         }
       },
       "Swashbuckle.AspNetCore/6.6.2": {
@@ -1599,7 +1572,6 @@
           "lib/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
         }
       },
-      "System.Buffers/4.5.1": {},
       "System.CodeDom/8.0.0": {
         "runtime": {
           "lib/net8.0/System.CodeDom.dll": {
@@ -1784,39 +1756,6 @@
         }
       },
       "System.Threading.Channels/6.0.0": {},
-      "System.Threading.Tasks.Extensions/4.5.4": {},
-      "Testcontainers/3.9.0": {
-        "dependencies": {
-          "Docker.DotNet": "3.125.15",
-          "Docker.DotNet.X509": "3.125.15",
-          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
-          "SSH.NET": "2023.0.0",
-          "SharpZipLib": "1.4.2"
-        },
-        "runtime": {
-          "lib/net8.0/Testcontainers.dll": {
-            "assemblyVersion": "3.9.0.0",
-            "fileVersion": "3.9.0.0"
-          }
-        },
-        "compile": {
-          "lib/net8.0/Testcontainers.dll": {}
-        }
-      },
-      "Testcontainers.PostgreSql/3.9.0": {
-        "dependencies": {
-          "Testcontainers": "3.9.0"
-        },
-        "runtime": {
-          "lib/net8.0/Testcontainers.PostgreSql.dll": {
-            "assemblyVersion": "3.9.0.0",
-            "fileVersion": "3.9.0.0"
-          }
-        },
-        "compile": {
-          "lib/net8.0/Testcontainers.PostgreSql.dll": {}
-        }
-      },
       "Verify/26.1.2": {
         "dependencies": {
           "Argon": "0.17.0",
@@ -2802,7 +2741,7 @@
         },
         "compileOnly": true
       },
-      "System.Buffers.Reference/8.0.0.0": {
+      "System.Buffers/8.0.0.0": {
         "compile": {
           "System.Buffers.dll": {}
         },
@@ -3624,7 +3563,7 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Tasks.Extensions.Reference/8.0.0.0": {
+      "System.Threading.Tasks.Extensions/8.0.0.0": {
         "compile": {
           "System.Threading.Tasks.Extensions.dll": {}
         },
@@ -3799,20 +3738,6 @@
       "sha512": "sha512-bO9PDNuH1VQ3TN/BH9xUiZOc1yxufYq/UnEKm3jg87sQJEOi0TBWLkLntRf/k/5WUpr/FpvVa4gvHqQ9M0F/fg==",
       "path": "diffengine/15.5.0",
       "hashPath": "diffengine.15.5.0.nupkg.sha512"
-    },
-    "Docker.DotNet/3.125.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XN8FKxVv8Mjmwu104/Hl9lM61pLY675s70gzwSj8KR5pwblo8HfWLcCuinh9kYsqujBkMH4HVRCEcRuU6al4BQ==",
-      "path": "docker.dotnet/3.125.15",
-      "hashPath": "docker.dotnet.3.125.15.nupkg.sha512"
-    },
-    "Docker.DotNet.X509/3.125.15": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ONQN7ImrL3tHStUUCCPHwrFFQVpIpE+7L6jaDAMwSF+yTEmeWBmRARQZDRuvfj/+WtB8RR0oTW0tT3qQMSyHOw==",
-      "path": "docker.dotnet.x509/3.125.15",
-      "hashPath": "docker.dotnet.x509.3.125.15.nupkg.sha512"
     },
     "EmptyFiles/8.3.0": {
       "type": "package",
@@ -4234,12 +4159,26 @@
       "path": "microsoft.testplatform.testhost/17.10.0",
       "hashPath": "microsoft.testplatform.testhost.17.10.0.nupkg.sha512"
     },
+    "Mono.Cecil/0.11.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DNYE+io5XfEE8+E+5padThTPHJARJHbz1mhbhMPNrrWGKVKKqj/KEeLvbawAmbIcT73NuxLV7itHZaYCZcVWGg==",
+      "path": "mono.cecil/0.11.3",
+      "hashPath": "mono.cecil.0.11.3.nupkg.sha512"
+    },
     "Mono.TextTemplating/2.2.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "NetArchTest.Rules/1.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-puPyNXkwJq8/UwXhHV8NrzNzkQl4IxEbcP+3PU0xLRiOedsVpaSdpwHhvOZfI0VwTcRvawCNxYQcSRbD4RUg4w==",
+      "path": "netarchtest.rules/1.3.2",
+      "hashPath": "netarchtest.rules.1.3.2.nupkg.sha512"
     },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
@@ -4269,33 +4208,12 @@
       "path": "nsubstitute/5.1.0",
       "hashPath": "nsubstitute.5.1.0.nupkg.sha512"
     },
-    "SharpZipLib/1.4.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A==",
-      "path": "sharpziplib/1.4.2",
-      "hashPath": "sharpziplib.1.4.2.nupkg.sha512"
-    },
     "SimpleInfoName/2.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-oasLpQjcW+x3/EEgAmFI1NkrSmjIuXGgxm9dbzTY8XHgv05324QJZb4dh07PzHjKOUK28ImObtXGF7h4pEbpaA==",
       "path": "simpleinfoname/2.3.0",
       "hashPath": "simpleinfoname.2.3.0.nupkg.sha512"
-    },
-    "SSH.NET/2023.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-g+3VDUrYhm0sqSxmlQFgRFrmBxhQvVh4pfn4pqjkX7WXE3tTjt1tIsOtjuz3mz/5s8gFFQVRydwCJ7Ohs54sJA==",
-      "path": "ssh.net/2023.0.0",
-      "hashPath": "ssh.net.2023.0.0.nupkg.sha512"
-    },
-    "SshNet.Security.Cryptography/1.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5pBIXRjcSO/amY8WztpmNOhaaCNHY/B6CcYDI7FSTgqSyo/ZUojlLiKcsl+YGbxQuLX439qIkMfP0PHqxqJi/Q==",
-      "path": "sshnet.security.cryptography/1.3.0",
-      "hashPath": "sshnet.security.cryptography.1.3.0.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",
@@ -4324,13 +4242,6 @@
       "sha512": "sha512-mBBb+/8Hm2Q3Wygag+hu2jj69tZW5psuv0vMRXY07Wy+Rrj40vRP8ZTbKBhs91r45/HXT4aY4z0iSBYx1h6JvA==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.6.2",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512"
-    },
-    "System.Buffers/4.5.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
-      "path": "system.buffers/4.5.1",
-      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
     },
     "System.CodeDom/8.0.0": {
       "type": "package",
@@ -4478,27 +4389,6 @@
       "sha512": "sha512-TY8/9+tI0mNaUMgntOxxaq2ndTkdXqLSxvPmas7XEqOlv9lQtB7wLjYGd756lOaO7Dvb5r/WXhluM+0Xe87v5Q==",
       "path": "system.threading.channels/6.0.0",
       "hashPath": "system.threading.channels.6.0.0.nupkg.sha512"
-    },
-    "System.Threading.Tasks.Extensions/4.5.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
-      "path": "system.threading.tasks.extensions/4.5.4",
-      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
-    },
-    "Testcontainers/3.9.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-jrWWOQYpBpPhAtVUgXiI0KLmgKK6/rwNYrCz1hC9MKbERTwVKukOTAagtOcma16xgSCsV0dvyo9pB25pOSx4zQ==",
-      "path": "testcontainers/3.9.0",
-      "hashPath": "testcontainers.3.9.0.nupkg.sha512"
-    },
-    "Testcontainers.PostgreSql/3.9.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Dj53LrCZk1PZSmb4tngxSuvC+sa2ft99uD516JlSZJdCRawBmK5Fr2AHzEjw9O/pivEHBv3DGJ5nkt9obiMEKQ==",
-      "path": "testcontainers.postgresql/3.9.0",
-      "hashPath": "testcontainers.postgresql.3.9.0.nupkg.sha512"
     },
     "Verify/26.1.2": {
       "type": "package",
@@ -5292,7 +5182,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Buffers.Reference/8.0.0.0": {
+    "System.Buffers/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5977,7 +5867,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Tasks.Extensions.Reference/8.0.0.0": {
+    "System.Threading.Tasks.Extensions/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
