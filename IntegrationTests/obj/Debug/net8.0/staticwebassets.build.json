@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "05qFcwICGzyV8DZCgXHLQm+jt0FP6MJXg8EfGrJQsWI=",
+  "Hash": "+10bam1BZtNovj1quEIParA5SBhk16Z0Sbjef1JcXlQ=",
   "Source": "IntegrationTests",
   "BasePath": "_content/IntegrationTests",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\ivana\\Desktop\\aspekt-loans\\aspekt-loans\\Aspekt\\Aspekt.csproj",
+      "Identity": "C:\\Users\\ivana.dimitrova\\Desktop\\aspekt-loans\\Aspekt\\Aspekt.csproj",
       "Version": 2,
       "Source": "Aspekt",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

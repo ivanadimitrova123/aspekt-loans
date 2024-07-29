@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Database=aspket-loans;Username=postgres;Password=Ivana"
+    "DefaultConnection": "Host=localhost;Database=aspket-loans;Username=postgres;Password=postgres"
   }
 }

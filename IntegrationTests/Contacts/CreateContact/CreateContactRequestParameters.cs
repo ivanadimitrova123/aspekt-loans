@@ -1,13 +1,13 @@
 namespace Aspekt.IntegrationTests.Contacts.CreateContact;
 
-internal sealed record CreateContactRequestParameters(int MinAge, int MaxAge)
+internal sealed record RegisterLoanRequestParameters(int MinAge, int MaxAge)
 {
     private const int MinimumAge = 18;
     private const int MaximumAge = 100;
 
-    internal static CreateContactRequestParameters GetValid() =>
+    internal static RegisterLoanRequestParameters GetValid() =>
         new(MinimumAge, MaximumAge);
 
-    internal static CreateContactRequestParameters GetWithInvalidAge() =>
+    internal static RegisterLoanRequestParameters GetWithInvalidAge() =>
         new(0, MinimumAge - 1);
 }

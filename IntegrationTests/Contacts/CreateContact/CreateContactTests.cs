@@ -32,7 +32,7 @@ public sealed class CreateApplicationtTests : IClassFixture<WebApplicationFactor
     public async Task Given_valid_contact_preparation_request_Then_should_return_created_status_code()
     {
         // Arrange
-        var requestParameters = CreateContactRequestParameters.GetValid();
+        var requestParameters = RegisterLoanRequestParameters.GetValid();
 
         // Act
         var prepareContactRequest = new CreateContactRequestFaker(requestParameters.MinAge, requestParameters.MaxAge).Generate();
@@ -48,7 +48,7 @@ public sealed class CreateApplicationtTests : IClassFixture<WebApplicationFactor
     public async Task Given_contact_preparation_request_with_invalid_age_Then_should_return_conflict_status_code()
     {
         // Arrange
-        var requestParameters = CreateContactRequestParameters.GetWithInvalidAge();
+        var requestParameters = RegisterLoanRequestParameters.GetWithInvalidAge();
 
         var prepareContactRequest = new CreateContactRequestFaker(requestParameters.MinAge, requestParameters.MaxAge).Generate();
 

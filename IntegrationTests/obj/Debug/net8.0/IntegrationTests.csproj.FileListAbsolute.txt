@@ -368,8 +368,6 @@ C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Dapper.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\DiffEngine.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Docker.DotNet.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Docker.DotNet.X509.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\EmptyFiles.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\FluentAssertions.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\FluentValidation.dll
@@ -406,10 +404,7 @@ C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Npgsql.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\NSubstitute.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\ICSharpCode.SharpZipLib.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\SimpleInfoName.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Renci.SshNet.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\SshNet.Security.Cryptography.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -424,8 +419,6 @@ C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\System.Management.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\System.Text.Json.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Testcontainers.dll
-C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Testcontainers.PostgreSql.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Verify.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Verify.Xunit.dll
 C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\xunit.abstractions.dll
@@ -1158,3 +1151,8 @@ C:\Users\ivana\Desktop\aspekt-loans\aspekt-loans\IntegrationTests\bin\Debug\net8
 C:\Users\ivana\Desktop\aspekt-loans\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Mono.Cecil.Rocks.dll
 C:\Users\ivana\Desktop\aspekt-loans\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Mono.Cecil.dll
 C:\Users\ivana\Desktop\aspekt-loans\aspekt-loans\IntegrationTests\bin\Debug\net8.0\NetArchTest.Rules.dll
+C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Mono.Cecil.Mdb.dll
+C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Mono.Cecil.Pdb.dll
+C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Mono.Cecil.Rocks.dll
+C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\Mono.Cecil.dll
+C:\Users\ivana.dimitrova\Desktop\aspekt-loans\IntegrationTests\bin\Debug\net8.0\NetArchTest.Rules.dll
