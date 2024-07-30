@@ -4,11 +4,10 @@ using Aspekt.Contacts.CreateContact;
 using Aspekt.UnitTests.Contacts.CreateContact.RequestValidator;
 using FluentValidation.TestHelper;
 
-public sealed class CreateContactRequestValidatorTests
+public sealed class PaidOFffLoanRequestValidatorTests
 {
     private readonly CreateContactRequestValidator _validator = new();
     private readonly string _fakeNowStr = new Faker().Random.String();
-    private readonly int _fakeNowInt = new Faker().Random.Int();
 
     [Fact]
     internal void Given_prepare_contact_request_validation_When_request_is_valid_Then_result_should_have_no_errors()

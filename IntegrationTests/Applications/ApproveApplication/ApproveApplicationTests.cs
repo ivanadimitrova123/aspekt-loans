@@ -9,6 +9,7 @@ using FluentAssertions;
 using Xunit;
 using Microsoft.EntityFrameworkCore;
 using Aspekt.Applications.Data.Database;
+using System.Linq;
 
 public sealed class ApproveApplicationTests : IClassFixture<WebApplicationFactory<Program>>, IClassFixture<DatabaseContainer>
 {
@@ -27,10 +28,25 @@ public sealed class ApproveApplicationTests : IClassFixture<WebApplicationFactor
                 });
             })
             .CreateClient();
+
         var serviceProvider = applicationFactory.Services.CreateScope().ServiceProvider;
         _applicationsPersistence = serviceProvider.GetRequiredService<ApplicationsPersistence>();
-
     }
+
+    private async Task<Guid> GetPendingApplicationIdAsync()
+    {
+        var application = await _applicationsPersistence.Applications
+            .Where(a => a.ApprovedAt == null)
+            .OrderBy(a => a.PreparedAt) 
+            .FirstOrDefaultAsync();
+        if (application == null)
+        {
+            throw new InvalidOperationException("No pending application found in the database.");
+        }
+
+        return application.Id; //?? Guid.Empty;
+    }
+
     private async Task<DateTimeOffset> GetApplicationCreationDateAsync(Guid applicationId)
     {
         var application = await _applicationsPersistence.Applications.FindAsync(applicationId);
@@ -41,33 +57,46 @@ public sealed class ApproveApplicationTests : IClassFixture<WebApplicationFactor
     public async Task Given_valid_application_approval_request_Then_should_return_created_status_code()
     {
         // Arrange
-        var applicationId = Guid.NewGuid(); // Or fetch a real application ID from your test setup
+        var applicationId = await GetPendingApplicationIdAsync();
+        if (applicationId == Guid.Empty)
+        {
+            Assert.Fail("No pending application found in the database.");
+            return;
+        }
+
         var creationDate = await GetApplicationCreationDateAsync(applicationId);
         var requestParameters = ApproveApplicationRequestParameters.GetValid(creationDate);
 
-        // Act
         var approveApplicationRequest = new ApproveApplicationRequestFaker(requestParameters.DateOfApproval).Generate();
+        var basePath = "/api/applications";
+        var requestUri = $"{basePath}/{applicationId}";
 
         // Act
-        var prepareApplicationResponse = await _applicationHttpClient.PostAsJsonAsync(ApplicationsApiPaths.Approve, approveApplicationRequest);
-        var responseContent = await prepareApplicationResponse.Content.ReadAsStringAsync();
+        var prepareApplicationResponse = await _applicationHttpClient.PatchAsJsonAsync(requestUri, approveApplicationRequest);
 
         // Assert
-        prepareApplicationResponse.Should().HaveStatusCode(HttpStatusCode.Created);
+        prepareApplicationResponse.Should().HaveStatusCode(HttpStatusCode.NoContent);
     }
 
     [Fact]
     public async Task Given_application_approval_request_with_invalid_date_Then_should_return_conflict_status_code()
     {
         // Arrange
-        var applicationId = Guid.NewGuid();
+        var applicationId = await GetPendingApplicationIdAsync();
+        if (applicationId == Guid.Empty)
+        {
+            Assert.Fail("No pending application found in the database.");
+            return;
+        }
+
         var creationDate = await GetApplicationCreationDateAsync(applicationId);
         var requestParameters = ApproveApplicationRequestParameters.GetWithInvalidDate(creationDate);
 
         var approveApplicationRequest = new ApproveApplicationRequestFaker(requestParameters.DateOfApproval).Generate();
-
+        var basePath = "/api/applications";
+        var requestUri = $"{basePath}/{applicationId}";
         // Act  
-        var prepareApplicationResponse = await _applicationHttpClient.PostAsJsonAsync(ApplicationsApiPaths.Approve, approveApplicationRequest);
+        var prepareApplicationResponse = await _applicationHttpClient.PatchAsJsonAsync(requestUri, approveApplicationRequest);
 
         // Assert
         prepareApplicationResponse.Should().HaveStatusCode(HttpStatusCode.Conflict);

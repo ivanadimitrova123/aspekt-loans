@@ -8,7 +8,6 @@ public sealed class CreateApplicationRequestValidatorTests
     private readonly CreateApplicationRequestValidator _validator = new();
     private readonly DateTimeOffset _fakeNowDate = new Faker().Date.RecentOffset();
     private readonly Guid _fakeNowID = new Faker().Random.Guid();
-    private readonly int _fakeNowAmount = new Faker().Random.Int();
 
     [Fact]
     internal void Given_create_application_request_validation_When_request_is_valid_Then_result_should_have_no_errors()

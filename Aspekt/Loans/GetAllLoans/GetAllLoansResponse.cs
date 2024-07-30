@@ -2,12 +2,12 @@
 
 using Data;
 
-internal record GetAllLoansResponse(IReadOnlyCollection<LoanDto> Loans)
+public record GetAllLoansResponse(IReadOnlyCollection<LoanDto> Loans)
 {
-    internal static GetAllLoansResponse Create(IReadOnlyCollection<LoanDto> loans) => new(loans);
+    public static GetAllLoansResponse Create(IReadOnlyCollection<LoanDto> loans) => new(loans);
 }
 
-internal record LoanDto(Guid Id, Guid ContactId)
+public record LoanDto(Guid Id, Guid ContactId)
 {
-    internal static LoanDto From(Loan loan) => new(loan.Id, loan.ContactId);
+    public static LoanDto From(Loan loan) => new(loan.Id, loan.ContactId);
 }

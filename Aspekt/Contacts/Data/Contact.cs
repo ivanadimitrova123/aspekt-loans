@@ -24,6 +24,7 @@ public sealed class Contact
     }
 
     internal static Contact Create(string name, string surname, int age, string phoneNumber, string socialSecurityNumber, string bankAccountNumber) { 
+        
         BusinessRuleValidator.Validate(new ContactCanBeCreatedOnlyForAdultRule(age));
 
         return new(

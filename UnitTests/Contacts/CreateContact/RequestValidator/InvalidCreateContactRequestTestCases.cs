@@ -5,7 +5,6 @@ using Aspekt.Contacts.CreateContact;
 internal sealed class InvalidCreateContactRequestTestCases : IEnumerable<object[]>
 {
     private readonly Faker _faker = new();
-    private readonly DateTimeOffset _fakeNow = new Faker().Date.RecentOffset();
     private readonly string _fakeNowStr = new Faker().Random.String2(10);
     public IEnumerator<object[]> GetEnumerator()
     {

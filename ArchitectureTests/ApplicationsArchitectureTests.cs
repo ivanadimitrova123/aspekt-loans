@@ -5,7 +5,7 @@ using Common;
 public sealed class ApplicationsArchitectureTests
 {
     private const string Event = "Event";
-
+    //[InlineData(...)]: These attributes provide the data that will be used as arguments for the test method. In this case, the test will be executed twice
     [Theory]
     [InlineData(Modules.Contacts)]
     [InlineData(Modules.Loans)]

@@ -63,12 +63,4 @@ public sealed class CreateApplicationtTests : IClassFixture<WebApplicationFactor
         responseMessage?.Title.Should().Be("Contact can not be prepared for a person who is not adult");
     }
 
-  /*  private async Task<HttpResponseMessage> PrepareCorrectContact(CreateContactRequestParameters requestParameters)
-    {
-        var prepareContractRequest = new CreateContactRequestFaker(requestParameters.MinAge, requestParameters.MaxAge);
-
-        var prepareContractResponse = await _applicationHttpClient.PostAsJsonAsync(ContactsApiPaths.Create, prepareContractRequest);
-
-        return prepareContractResponse;
-    }*/
 }

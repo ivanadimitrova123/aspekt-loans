@@ -23,7 +23,6 @@ internal static class ApproveApplicationEndpoint
                     return Results.NotFound();
                 }
 
-                //var dateNow = timeProvider.GetUtcNow();
                 application.Approve(request.ApprovedAt);
                 await persistence.SaveChangesAsync(cancellationToken);
 

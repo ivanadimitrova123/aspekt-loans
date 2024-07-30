@@ -9,14 +9,12 @@ internal sealed class ContactEntityConfiguration : IEntityTypeConfiguration<Cont
     {
         builder.ToTable("Contacts");
         builder.HasKey(contact => contact.Id);
-       // builder.Property(contact => contact.Id).ValueGeneratedOnAdd();
         builder.Property(contact => contact.Name).IsRequired();
         builder.Property(contact => contact.Surname).IsRequired();
         builder.Property(contact => contact.Age).IsRequired();
         builder.Property(contact => contact.PhoneNumber).IsRequired();
         builder.Property(contact => contact.SocialSecurityNumber).IsRequired();
         builder.Property(contact => contact.BankAccountNumber).IsRequired();
-        //builder.Property(contact => contact.City).IsRequired(false);
 
     }
 }

@@ -1,7 +1,7 @@
 ﻿using Aspekt.Common.BusinessRulesEngine;
 
 namespace Aspekt.Loans.Data;
-internal sealed class Loan
+public sealed class Loan
 {
     public Guid Id { get; init; }
     public Guid ContactId { get; init; }
